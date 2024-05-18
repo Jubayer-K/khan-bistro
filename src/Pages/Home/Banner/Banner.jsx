@@ -11,7 +11,7 @@ const Banner = () => {
     <>
       <Carousel
         autoPlay
-        interval={3000} // Time between slides in milliseconds
+        interval={3000}
         infiniteLoop
         showStatus={false}
         swipeable={true}
