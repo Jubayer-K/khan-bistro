@@ -1,32 +1,20 @@
+import { Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const NavBar = () => {
   const navOptions = (
     <>
       <li>
-        <a>Item 1</a>
+        <Link to={"/"}>Home</Link>
       </li>
       <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <a>Item 3</a>
+        <Link to={"/menu"}>Our Menu</Link>
       </li>
     </>
   );
   return (
     <>
-      <div className="navbar fixed z-10 bg-backdrop-blur-md bg-white/20 rounded-b-3xl">
+      <div className="navbar fixed z-10 text-white backdrop-blur-sm bg-black/30 rounded-b-md">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +35,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content bg-backdrop-blur-md bg-black/40 mt-3 z-[1] p-2 shadow rounded-box w-52"
             >
               {navOptions}
             </ul>
