@@ -9,12 +9,12 @@ const ThemeToggle = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'coffee' ? 'lemonade' : 'coffee');
+    setTheme(theme === 'coffee' ? 'light' : 'coffee');
   };
 
   return (
     <button onClick={toggleTheme} className="btn">
-      {theme === 'coffee' ? 'Lemonade' : 'Coffee'}
+      {theme === 'coffee' ? 'Light' : 'Coffee'}
     </button>
   );
 };
